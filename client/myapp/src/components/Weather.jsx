@@ -49,7 +49,7 @@ export default function Weather() {
   };
     useEffect(() => {
     fetchWeather(city);
-  }, []); 
+  }, [city]); 
 
  const weatherData = () => {
   if (!data) return null; 
