@@ -33,23 +33,28 @@ export default function Weather() {
 
   const fetchWeather = async (selectedCity) => {
     setLoading(true);
-    setError("");
+    setData("")
     try{
         const data=await getWeatherData(selectedCity);
         // console.log(data);
+
         setData(data);
     }catch(e){
-        setError("Could not fetch weather data. Please try again.");
+        setError("Please enter a valid input.");
       console.error("e",e);
+      setData(null)
     }finally{
         setLoading(false);
     }
 
     
   };
-    useEffect(() => {
-    fetchWeather(city);
-  }); 
+   useEffect(() => {
+  if (!city) return; 
+  setError("");       
+  fetchWeather(city);
+}, [city]);
+
 
  const weatherData = () => {
   if (!data) return null; 
