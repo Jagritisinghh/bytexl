@@ -10,6 +10,18 @@ export const CurrencyMainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  /* Tablet */
+  @media (max-width: 768px) {
+    width: 80%;
+    padding: 25px;
+  }
+
+  /* Mobile */
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 20px;
+  }
 `;
 
 export const CurrencyHeading = styled.h2`
@@ -17,6 +29,14 @@ export const CurrencyHeading = styled.h2`
   color: #fff;
   margin-bottom: 20px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+  }
 `;
 
 export const Input = styled.input`
@@ -30,6 +50,17 @@ export const Input = styled.input`
 
   &:focus {
     border-color: #0077ff;
+  }
+
+  @media (max-width: 768px) {
+    width: 85%;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 8px 12px;
   }
 `;
 
@@ -51,6 +82,16 @@ export const ConvertButton = styled.button`
   &:active {
     transform: scale(0.98);
   }
+
+  @media (max-width: 768px) {
+    padding: 8px 20px;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 7px 16px;
+    font-size: 0.9rem;
+  }
 `;
 
 export const ConvertedAmountContainer = styled.div`
@@ -62,22 +103,60 @@ export const ConvertedAmountContainer = styled.div`
   border-radius: 8px;
   margin-bottom: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 8px 12px;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 6px;
+    padding: 8px 10px;
+  }
 `;
 
 export const Amount = styled.span`
   font-weight: bold;
   font-size: 1rem;
   color: #333;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 export const Rate = styled.span`
   font-size: 1rem;
   color: #555;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
-export const ErrorMessage=styled.p`
-color:red;
-font-family:"Roboto";
-font-size:20px;`
+export const ErrorMessage = styled.p`
+  color: red;
+  font-family: "Roboto";
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
 
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
+`;

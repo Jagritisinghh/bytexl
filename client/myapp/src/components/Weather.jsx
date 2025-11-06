@@ -40,7 +40,6 @@ export default function Weather() {
 
         setData(data);
     }catch(e){
-        setError("Please enter a valid input.");
       console.error("e",e);
       setData(null)
     }finally{
