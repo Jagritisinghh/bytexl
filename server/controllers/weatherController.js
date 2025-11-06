@@ -7,9 +7,11 @@ dotenv.config();
 
 export const getWeather = async (req, res) => {
   try {
-    const { city } = req.query;
+    let { city } = req.query;
 
-    
+    if (!city || city.trim() === "") {
+      city = "New York";
+    }
   
     const response = await axios.get(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
